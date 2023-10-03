@@ -8,26 +8,22 @@ To set this up add each teammates name in the `teammate name` column. Each
 team member should Place an 'X' under their name to vote for the ideas 
 you like the best.
 
-| No. | Question/Option | Teammate name | Teammate name | Teammate name | Teammate name | Teammate name | Teammate name |
+| No. | Question/Option | Laura | Richard | Laurra
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 | Team meeting schedule | | | | | | |
-|   |	- Sprint Planning Sunday@9:00 a.m. CST | | | | | | |
-|   |	- Knowledge Xfer as needed | | | | | | |
-|   |	- Working Session Thursday@4:00 p.m. CST | | | | | | |
-| 2	| Project Backlog Tool | | | | | | |
-|   |	- Notion | | | | | | |
-|   |	- Jira | | | | | | |
-| 3	| Technical Stack (vote by adding your pref. in the cell under your name) | | | | | | |
-|   |	- BE Language | | | | | | |
-|   |	- FE Language | | | | | | |
-|   |	- FE Framework | | | | | | |
-|   |	- ML Framework | | | | | | |
-|   |	- Visualization/Graphics package (if required, e.g. D3, Nivo, etc.) | | | | | | |
-| 4	| Where to host the app? | | | | | | |
-|   |	- Heroku (suitable for FE, BE, & Postgres) | | | | | | |
+| 1 | Team meeting schedule 
+|   |	- Sprint Planning/ Working Session Thursday@8:30/9:30/10:30 a.m. 
+|   |	- share resources with each other
+|   | - due to everyone's scheduling needs, each meeting will be scheduled at the end of the previous meeting
+| 2	| Project Backlog Tool
+|   |	- Jira 
+| 3	| Technical Stack (all voted for the techstack below) | | | | | | |
+|   |	- BE Language | Recipe Rapid API
+|   |	- FE Language | HTML, CSS (boostrap), JavaScript
+|   |	- FE Framework | React
+|   |	- ML Framework | NA
+|   |	- Visualization/Graphics package (if required, e.g. D3, Nivo, etc.) | Figma
+| 4	| Where to host the app? |
 |   |	- Netlify (suitable only for FE) | | | | | | |
-|   |	- Vercel (suitable only for FE) | | | | | | |
-|   |	- Mongo Atlas (suitable only for MongoDB) | | | | | | |
 | 5	| BE/FE repos organization | | | | | | |
 |   |	- Separate GitHub repos for each | | | | | | |
 |   |	- Single GitHub repo for both | | | | | | |
