@@ -22,15 +22,11 @@ you like the best.
 |   |	- FE Framework | React
 |   |	- ML Framework | NA
 |   |	- Visualization/Graphics package (if required, e.g. D3, Nivo, etc.) | Figma
-| 4	| Where to host the app? |
+| 4	| Where to host the app? will depend on what the project needs
 |   |	- Netlify (suitable only for FE) | | | | | | |
 | 5	| BE/FE repos organization | | | | | | |
-|   |	- Separate GitHub repos for each | | | | | | |
-|   |	- Single GitHub repo for both | | | | | | |
-| 6	| Wireframing tool | | | | | | |
-|   |	- Paper & pencil | | | | | | |
-|   |	- Adobe XD | | | | | | |
-|   |	- Balsamiq | | | | | | |
+|   |	- single repo (only need FE)
+| 6	| Wireframing tool |
 |   |	- Figma | | | | | | |
 | 7	| Who works in which part of the app? | | | | | | |
 |   | - BE (not applicable for Tier 1 teams) | | | | | | |
