@@ -18,7 +18,7 @@ you like the best.
 |   |	- Jira 
 | 3	| Technical Stack (all voted for the techstack below) | | | | | | |
 |   |	- BE Language | Recipe Rapid API
-|   |	- FE Language | HTML, CSS (boostrap), JavaScript
+|   |	- FE Language | HTML, CSS (bootstrap), JavaScript
 |   |	- FE Framework | React
 |   |	- ML Framework | NA
 |   |	- Visualization/Graphics package (if required, e.g. D3, Nivo, etc.) | Figma
