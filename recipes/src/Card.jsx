@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import './Card.module.css';
+import styles from './Card.module.css';
 
 const Card = () => {
   const [data, setData] = useState([]);
@@ -48,7 +48,7 @@ const Card = () => {
         return null;
       }
       return (
-        <div key={recipe.id}>
+        <div className={styles.cards} key={recipe.id}>
           <h2>{recipe.name}</h2>
           <p>{recipe.description}</p>
         </div>
