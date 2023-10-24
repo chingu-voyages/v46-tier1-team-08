@@ -13,8 +13,7 @@ const Card = () => {
       const options = {
         method: 'GET',
         headers: {
-          //would normally use an env file to hide api key
-          'X-RapidAPI-Key': '109ea4696fmsh3a46f9a36cab73bp1be7bejsn6fa98eee3d63',
+          'X-RapidAPI-Key': import.meta.env.VITE_REACT_API_KEY,
           'X-RapidAPI-Host': 'tasty.p.rapidapi.com',
         },
       };
