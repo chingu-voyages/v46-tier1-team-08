@@ -1,7 +1,44 @@
+/* .cardGrid{
+    display: flex;
+    flex-wrap: wrap;
+}
 .cards{
     height: 334px;
     width: 242px;
     background-color: #eefee9;
-    color: black;
+    color: #414445;
     border-radius: 5%;
+    
 }
+.cardName{
+    height: 75px;
+    width: 100%;
+    background-color: #eefee9;
+    color: #414445;
+    position: relative;
+    top: 210px;
+   
+} */
+.cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .card {
+    height: 334px;
+    width: 242px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }

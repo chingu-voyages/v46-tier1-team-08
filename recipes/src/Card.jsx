@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './App.css';
+//import './App.css';
 import styles from './Card.module.css';
 
 const Card = () => {
@@ -9,7 +9,7 @@ const Card = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=3&q=chicken%20soup';
+      const url = 'https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=chicken≈';
       const options = {
         method: 'GET',
         headers: {
@@ -40,19 +40,43 @@ const Card = () => {
   if (error) return <div>Error: {error.message}</div>;
   if (data.length === 0) return <div>No data available</div>;
   return (
-    <div>
+   
+        <div className={styles.cardGrid}>
+    <div className={styles.cardsContainer}>
    {data.map((recipe) => {
       if (!recipe.name || !recipe.description) {
         console.warn(`Recipe is missing name or description: ${recipe}`);
         return null;
       }
       return (
-        <div className={styles.cards} key={recipe.id}>
-          <h2>{recipe.name}</h2>
-          <p>{recipe.description}</p>
+      
+        <div
+          className={styles.card}
+          style={{
+            backgroundImage: `url(${recipe.thumbnail_url})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+          key={recipe.id}
+        >
+          <h2 className={styles.cardName}>{recipe.name}</h2>
         </div>
+       
+ 
+        // <div className={styles.cardGrid}>
+        // <div className={styles.cards}  style={{
+        //   backgroundImage: `url(${recipe.thumbnail_url})`,
+        //   height: '334px',
+        //   width: '242px',
+        //   backgroundSize: 'cover',
+        //   backgroundPosition: 'center',
+        // }} key={recipe.id}>
+        //   <h2 className={styles.cardName}>{recipe.name}</h2>
+        // </div>
+        // </div>
       );
     })}
+    </div>
   </div>
 )
 
