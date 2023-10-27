@@ -82,7 +82,7 @@
 
 // }
 // export default Card;
-
+//-----------------------------------------------------------------------------------
 //import needed modules
 import { useState, useEffect } from 'react';
 import styles from './Card.module.css';
