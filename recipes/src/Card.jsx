@@ -82,29 +82,36 @@
 
 // }
 // export default Card;
+
+//import needed modules
 import { useState, useEffect } from 'react';
 import styles from './Card.module.css';
 import data from './data.json';
 
+//the actual recipe card component
 const Card = () => {
+  //sets state for loading with true as default
   const [isLoading, setIsLoading] = useState(true);
-  
+  //sets state if there is an error
   useEffect(() => {
     setIsLoading(false);
   }, []);
-
+//error handling
   if (isLoading) return <div>Loading...</div>;
+  //if there is no data, return no data available
   const recipes = data[0].results;
   if (!recipes || recipes.length === 0) return <div>No data available</div>;
 
 return (
   <div className={styles.cardGrid}>
     <div className={styles.cardsContainer}>
+      {/* map through the data and return the recipe name and image */}
       {recipes.map((recipe) => { 
         if (!recipe.name) {
           console.warn(`Recipe is missing name or description: ${recipe}`);
           return null;
         }
+        // what gets displayed in browser
         return (
           <div
             className={styles.card}
@@ -113,6 +120,7 @@ return (
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
+            //each item in a list needs a unique key
             key={recipe.id}
           >
             <h2 className={styles.cardName}>{recipe.name}</h2>
@@ -123,4 +131,5 @@ return (
   </div>
 );
 };
+//exports the card component
 export default Card;
