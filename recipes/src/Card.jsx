@@ -92,6 +92,7 @@ import data from './data.json';
 const Card = () => {
   //sets state for loading with true as default
   const [isLoading, setIsLoading] = useState(true);
+  const [flip, setFlip] = useState(false);
   //sets state if there is an error
   useEffect(() => {
     setIsLoading(false);
@@ -104,7 +105,7 @@ const Card = () => {
 
 return (
   <div className={styles.cardGrid}>
-    <div className={styles.cardsContainer}>
+    <div className={styles.cardsContainer} >
       {/* map through the data and return the recipe name and image */}
       {recipes.map((recipe) => { 
         if (!recipe.name) {
@@ -113,22 +114,38 @@ return (
         }
         // what gets displayed in browser
         return (
+          <>
+          {/* apply card class to entire card */}
           <div
-            className={styles.card}
+            className={`${styles.card} ${flip ? styles.flip : ''}`}
             style={{
               backgroundImage: `url(${recipe.thumbnail_url})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
-            }}
+            }} onClick={() => setFlip(!flip)}
             //each item in a list needs a unique key
             key={recipe.id}
           >
             <h2 className={styles.cardName}>{recipe.name}</h2>
+            <div className={`${styles.front} ${flip ? styles.hide : ''}`}>
+                <h2 className={styles.cardName}>{recipe.name}</h2>
+              </div>
+              <div className={`${styles.back} ${flip ? '' : styles.hide}`}>
+                <p>{recipe.name}</p>
+              </div>
           </div>
-        );
+          {/* <div className={`${styles.front} ${flip ? styles.hide : ''}`}>
+                <h2 className={styles.cardName}>{recipe.name}</h2>
+              </div>
+              <div className={`${styles.back} ${flip ? '' : styles.hide}`}>
+                <p>{recipe.name}</p>
+              </div> */}
+          {/* <div className={`${styles.card} ${styles.back}`} onClick={() => setFlip(!flip)}></div> */}
+          </>  );
       })}
     </div>
   </div>
+  
 );
 };
 //exports the card component
