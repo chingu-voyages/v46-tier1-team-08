@@ -6,4 +6,4 @@ Possible features: check off ingredients, like & share buttons, reviews section,
 
 Running the project:
 
-Dependencies:
+Dependencies: npm, Vite
