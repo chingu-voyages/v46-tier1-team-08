@@ -80,13 +80,13 @@
   transform: rotateY(180deg);
   backface-visibility: hidden;
 } */
-.cardGrid {
+/* .cardGrid {
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
   gap: 1rem;
   margin: 20px 20px 20px 45px;
-  padding: 30px;
+  padding: 30px; 
 }
 
 .cardsContainer {
@@ -121,27 +121,36 @@
   width: 100%;
   color: white;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  backface-visibility: hidden;
+  
 }
 
 .front {
   position: absolute;
   top: 0;
-  left: 0;
+  
   right: 0;
-  bottom: 0;
-  color: deeppink;
+  bottom: 0; 
+   color: deeppink;
+  backface-visibility: hidden;
 }
 
 .back {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; 
+   left: 0; 
   right: 0;
-  bottom: 0;
+  bottom: 0; 
   color: blue;
   transform: rotateY(180deg);
+  backface-visibility: hidden; 
 }
 .hide{
   display: none;
+} */
+
+.flippable-card-container {
+  /* === Sizing === */
+  height: 334px;
+  width: 242px;
+  perspective: 1000px;
 }
