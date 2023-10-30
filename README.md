@@ -8,4 +8,4 @@ Running the project:
 
 Dependencies: node, Vite
 
-(notes for installing vite: npm create@latest, choose React from list, choose JavaScript from list, cd into folder (seems to need to have a folder to go into or else it will create its own - biggest issue with creating vite install as I'm not sure I understand how it works beyond running the server so I can see what it looks like in browser), npm install, npm run dev)
+(notes for installing vite: npm create vite@latest, choose React from list, choose JavaScript from list, cd into folder (seems to need to have a folder to go into or else it will create its own - biggest issue with creating vite install as I'm not sure I understand how it works beyond running the server so I can see what it looks like in browser), npm install, npm run dev)
