@@ -1,11 +1,11 @@
 import './App.css';
-import Card from './FlipCard.jsx';
+import FlipCard from './FlipCard.jsx';
 
 
 const App = () => {
   return(
     <>
-      <Card />
+      <FlipCard />
     </>
   )
 }

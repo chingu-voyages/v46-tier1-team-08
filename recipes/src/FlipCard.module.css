@@ -47,6 +47,6 @@ body {
 
 .back {
   background: #03446A;
-  color: purple;
+  color: #000;
   transform: rotateY( 180deg );
 }

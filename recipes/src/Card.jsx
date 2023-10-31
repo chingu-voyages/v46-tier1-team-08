@@ -88,13 +88,13 @@
 // import styles from './Card.module.css';
 // import data from './data.json';
 // import {CSSTransition} from 'react-transition-group';
-import FlipCard from './FlipCard';
+// import FlipCard from './FlipCard';
 
 
-const Card = () => {
-return(
-  <FlipCard />
-)
+// const Card = () => {
+// return(
+//   <FlipCard />
+// )
 //   const [isLoading, setIsLoading] = useState(true);
 //    //const [flip, setFlip] = useState(false);
 //    const [showFront, setShowFront] = useState(true);
@@ -159,6 +159,6 @@ return(
 //   </div>
   
 // );
- };
+ //};
 
-export default Card;
+//export default Card;
