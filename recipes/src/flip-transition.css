@@ -9,7 +9,7 @@ showFront = false -> true
 back -> front
 
 */
-
+/* 
 .flip-exit {
     transform: rotateY(0deg);
 }
@@ -36,4 +36,4 @@ back -> front
 
 .flip-enter-done {
     transform: rotateY(0deg);
-}
+} */

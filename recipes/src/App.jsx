@@ -1,5 +1,5 @@
 import './App.css';
-import Card from './Card.jsx';
+import Card from './FlipCard.jsx';
 
 
 const App = () => {

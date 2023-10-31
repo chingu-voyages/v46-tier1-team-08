@@ -148,9 +148,3 @@
   display: none;
 } */
 
-.flippable-card-container {
-  /* === Sizing === */
-  height: 334px;
-  width: 242px;
-  perspective: 1000px;
-}
