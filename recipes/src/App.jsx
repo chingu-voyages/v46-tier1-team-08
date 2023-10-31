@@ -10,12 +10,8 @@ import FlipCard from './FlipCard.jsx';
 const App = () => {
   return(
     <>
-
     <Search />
-     
-
       <FlipCard />
-
     </>
   )
 }
