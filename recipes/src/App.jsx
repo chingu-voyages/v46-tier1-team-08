@@ -1,12 +1,21 @@
 import './App.css';
-import Card from './Card.jsx';
+
+
 import Search from './Search.jsx';
+
+import FlipCard from './FlipCard.jsx';
+
+
 
 const App = () => {
   return(
     <>
+
     <Search />
-      <Card />
+     
+
+      <FlipCard />
+
     </>
   )
 }

@@ -83,53 +83,82 @@
 // }
 // export default Card;
 //-----------------------------------------------------------------------------------
-//import needed modules
-import { useState, useEffect } from 'react';
-import styles from './Card.module.css';
-import data from './data.json';
 
-//the actual recipe card component
-const Card = () => {
-  //sets state for loading with true as default
-  const [isLoading, setIsLoading] = useState(true);
-  //sets state if there is an error
-  useEffect(() => {
-    setIsLoading(false);
-  }, []);
-//error handling
-  if (isLoading) return <div>Loading...</div>;
-  //if there is no data, return no data available
-  const recipes = data[0].results;
-  if (!recipes || recipes.length === 0) return <div>No data available</div>;
+// import { useState, useEffect } from 'react';
+// import styles from './Card.module.css';
+// import data from './data.json';
+// import {CSSTransition} from 'react-transition-group';
+// import FlipCard from './FlipCard';
 
-return (
-  <div className={styles.cardGrid}>
-    <div className={styles.cardsContainer}>
-      {/* map through the data and return the recipe name and image */}
-      {recipes.map((recipe) => { 
-        if (!recipe.name) {
-          console.warn(`Recipe is missing name or description: ${recipe}`);
-          return null;
-        }
-        // what gets displayed in browser
-        return (
-          <div
-            className={styles.card}
-            style={{
-              backgroundImage: `url(${recipe.thumbnail_url})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            }}
-            //each item in a list needs a unique key
-            key={recipe.id}
-          >
-            <h2 className={styles.cardName}>{recipe.name}</h2>
-          </div>
-        );
-      })}
-    </div>
-  </div>
-);
-};
-//exports the card component
-export default Card;
+
+// const Card = () => {
+// return(
+//   <FlipCard />
+// )
+//   const [isLoading, setIsLoading] = useState(true);
+//    //const [flip, setFlip] = useState(false);
+//    const [showFront, setShowFront] = useState(true);
+   //const cardRef = useRef(null);
+ 
+//   useEffect(() => {
+//     setIsLoading(false);
+//   }, []);
+
+//   if (isLoading) return <div>Loading...</div>;
+//  
+//   const recipes = data[0].results;
+//   if (!recipes || recipes.length === 0) return <div>No data available</div>;
+//   const handleCardClick = () => {
+//     setShowFront((v) => !v);
+//   };
+
+
+// return (
+
+//   <div className={styles.flippableCardContainer}>
+//   <CSSTransition
+//       in={showFront}
+//       timeout={300}
+//       classNames='flip'
+//   >
+//       <FlipCard onClick={handleCardClick}/>
+//   </CSSTransition>
+// </div>
+//   <div className={styles.cardGrid}>
+//     <div className={styles.cardsContainer} >
+//       {/* map through the data and return the recipe name and image */}
+//       {recipes.map((recipe) => { 
+//         if (!recipe.name) {
+//           console.warn(`Recipe is missing name or description: ${recipe}`);
+//           return null;
+//         }
+//       
+//         return (
+//           <>
+//           <div
+//             className={`${styles.card} ${flip ? styles.flip : ''}`}
+//             style={{
+//               backgroundImage: `url(${recipe.thumbnail_url})`,
+//               backgroundSize: 'cover',
+//               backgroundPosition: 'center',
+//             }} onClick={() => setFlip(!flip)}
+//             //each item in a list needs a unique key
+//             key={recipe.id}
+//           >
+//             <h2 className={styles.cardName}>{recipe.name}</h2> 
+//             <div className={`${styles.front}`}>
+//                 <h2 className={styles.cardName}>{recipe.name}</h2>
+//               </div>
+//               <div className={`${styles.back}`}>
+//                 <p>{recipe.name}</p>
+//               </div>
+//           </div>
+//           </>  );
+//       })}
+//     </div>
+//   </div>
+  
+// );
+ //};
+
+//export default Card;

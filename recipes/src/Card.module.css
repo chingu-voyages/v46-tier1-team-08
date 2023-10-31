@@ -19,26 +19,132 @@
     top: 210px;
    
 } */
-.cardGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-  }
-  
-  .cardsContainer {
-    display: flex;
+
+/* card-grid */
+/* .cardGrid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(242px, 1fr));
+  gap: 1rem;
+  margin: 20px 20px 20px 45px;
+  padding: 30px;
+} */
+/* card */
+/* .cardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.35rem;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  transform: perspective(1000px) rotateY(let(--rotate-y, 0)) translate(let(--translate-y, 0));
+  transform-style: preserve-3d;
+  transition: 150ms;
+  height: 334px;
+  width: 242px;
+  margin: 10px; */
+  /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
-  }
+    width: 100%; */
+/* } */
+/* .cardsContainer:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+.cardsContainer.flip {
+  --rotate-y: 180deg;
+} */
+/* .card {
+  height: 334px;
+  width: 242px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+} */
+/* 
+.front {
+  position: absolute;
+  color: deeppink;
+  backface-visibility: hidden;
+}
+
+.back {
+  position: absolute;
+  color: thistle;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+} */
+/* .cardGrid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
+  gap: 1rem;
+  margin: 20px 20px 20px 45px;
+  padding: 30px; 
+}
+
+.cardsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.35rem;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: black;
+  transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translate(var(--translate-y, 0));
+  transform-style: preserve-3d;
+  transition: 150ms;
+  height: 334px;
+  width: 242px;
+  margin: 10px;
+}
+
+.cardsContainer:hover {
+  --translate-y: -2px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.cardsContainer.flip {
+  --rotate-y: 180deg;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   
-  .card {
-    height: 334px;
-    width: 242px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 20px;
-    color: white;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  }
+}
+
+.front {
+  position: absolute;
+  top: 0;
+  
+  right: 0;
+  bottom: 0; 
+   color: deeppink;
+  backface-visibility: hidden;
+}
+
+.back {
+  position: absolute;
+  top: 0; 
+   left: 0; 
+  right: 0;
+  bottom: 0; 
+  color: blue;
+  transform: rotateY(180deg);
+  backface-visibility: hidden; 
+}
+.hide{
+  display: none;
+} */
+
