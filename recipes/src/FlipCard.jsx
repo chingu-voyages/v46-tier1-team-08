@@ -1,5 +1,6 @@
 
 //import "./flip-transition.css";
+import data from './data.json';
 import styles from  "./FlipCard.module.css";
 function FlipCard() {
   
@@ -8,10 +9,10 @@ function FlipCard() {
     <div className={styles.card}>
   <div className={styles.content}>
     <div className={styles.front}>
-      Front!
+      {data.results}
     </div>
     <div className={styles.back}>
-      Back!
+      Support Local Businesses by Eating Out Instead!
     </div>
   </div>
 </div>
