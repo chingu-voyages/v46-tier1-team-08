@@ -1,4 +1,6 @@
-
+ul{
+  list-style-type: none;
+}
 .main {
   background: #eefee9;
   display: flex;
@@ -6,7 +8,6 @@
   justify-content: space-around;
   align-items: flex-start;
   padding: 20px;
- 
 }
 
 .card {
@@ -26,7 +27,8 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: transform 1s;
   transform-style: preserve-3d;
- 
+  border-radius: 5%;
+  
 }
 
 .front, .back {
@@ -51,6 +53,7 @@
   transform: rotateY(180deg);
   background: #eefee9;
   color: #414445;
+ 
 }
 
 .flipCard .content {
