@@ -1,5 +1,4 @@
 import { useState } from 'react';
-//import "./flip-transition.css";
 //import data from './data.json';
 import styles from  "./FlipCard.module.css";
 function FlipCard() {
@@ -10,6 +9,7 @@ function FlipCard() {
   };
   return (
     <div className={styles.main}>
+      {/* map throught data here */}
       <div className={styles.card}>
     <div className={`${styles.card} ${isFlipped ? styles.flipCard : ''}`} onClick={handleClick}>
   <div className={styles.content}>
@@ -22,6 +22,7 @@ function FlipCard() {
   </div>
 </div>
 </div>
+
 </div>
   );
 }
