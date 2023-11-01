@@ -160,5 +160,41 @@
   
 // );
  //};
-
+   //  <div className={styles.card} onClick={onClick} ref={cardRef} >
+    //   <div className={styles['card-back']}><p>front</p></div>
+    //   <div className={styles['card-front']}><p>bck</p></div>
+       /* <div className={styles.cardGrid}>
+    <div className={styles.cardsContainer} >
+    
+      {recipes.map((recipe) => { 
+        if (!recipe.name) {
+          console.warn(`Recipe is missing name or description: ${recipe}`);
+          return null;
+        }
+       
+        return (
+          <>
+          <div
+            className={`${styles.card} ${flip ? styles.flip : ''}`}
+            style={{
+              backgroundImage: `url(${recipe.thumbnail_url})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }} onClick={() => setFlip(!flip)}
+            //each item in a list needs a unique key
+            key={recipe.id}
+          >
+            <h2 className={styles.cardName}>{recipe.name}</h2> 
+            <div className={`${styles.front}`}>
+                <h2 className={styles.cardName}>{recipe.name}</h2>
+              </div>
+              <div className={`${styles.back}`}>
+                <p>{recipe.name}</p>
+              </div>
+          </div>
+          </>  );
+      })} */
+    /* </div>
+  </div> */
+    // </div>
 //export default Card;
