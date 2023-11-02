@@ -42,27 +42,31 @@
 }
 
 /* Search Styles */
-.App {
+body {
   background: url(img/photo-1543353071-873f17a7a088.jpg);
   background-size: cover;
+  object-position: 50% 50%;
   height: 100%;
   width: 100%;
 }
+
 .search-bar-container {
   align-items: center;
   display: flex;
   flex-direction: column;
   margin: auto;
   min-width: 200px;
-  padding-top: 20vh;
   width: 40%;
+}
+.script h1 {
+  color: #414445;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 5% 0 0 15%;
+  text-shadow: 2px 2px #ffffff;
+  width: 80%;
 }
 img {
   padding: 20% 0 0 0;
   width: 40%;
-}
-h1 {
-  font-size: 2em;
-  font-weight: bold;
-  padding: 15% 0 0 0;
 }
