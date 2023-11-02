@@ -5,9 +5,10 @@ import "./SearchBar.css";
 export const SearchBar = ({ setResults }) => {
     const [input, setInput] = useState("");
     const fetchData = (value) => {
-        fetch("https://jsonplaceholder.typicode.com/users")
+        fetch /*("https://jsonplaceholder.typicode.com/users")*/
             .then((response) => response.json())
             .then((json) => {
+                const results = json.filter((user) => {
                 return (
                     value &&
                     user &&
@@ -15,7 +16,9 @@ export const SearchBar = ({ setResults }) => {
                     user.name.toLowerCase().includes(value)
                 );
             });
-    };
+            setResults(results);
+    });
+};
     const handleChange = (value) => {
         setInput(value);
         fetchData(value);
