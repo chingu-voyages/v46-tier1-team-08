@@ -1,6 +1,13 @@
 ul{
   list-style-type: none;
 }
+ol{
+  list-style-type: none;
+}
+a{
+  margin-right: 5px;
+  margin-left: 5px;
+}
 .main {
   background: #eefee9;
   display: flex;
@@ -35,7 +42,7 @@ ul{
   height: 100%;
   color: #414445;
   text-align: center;
-  font-size: 10px;
+  font-size: 15px;
   backface-visibility: hidden;
   border-radius: 5%;
 }
