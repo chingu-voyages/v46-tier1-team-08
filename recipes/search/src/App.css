@@ -45,9 +45,11 @@
 body {
   background: url(img/photo-1543353071-873f17a7a088.jpg);
   background-size: cover;
+  object-position: 50% 50%;
   height: 100%;
   width: 100%;
 }
+
 .search-bar-container {
   align-items: center;
   display: flex;

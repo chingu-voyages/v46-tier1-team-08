@@ -20,25 +20,26 @@ function Search() {
   );
 }
 
+/* Search Bar Starts */
 const SearchBar = ({ setResults }) => {
   const [input, setInput] = useState("");
   const fetchData = (value) => {
       fetch /*("https://jsonplaceholder.typicode.com/users")*/
           .then((response) => response.json())
           .then((json) => {
-              const results = json.filter((user) => {
+              const results = json.filter((recipes) => {
               return (
                   value &&
-                  user &&
-                  user.name &&
-                  user.name.toLowerCase().includes(value)
-              );
-          });
+                  recipes &&
+                  recipes.name &&
+                  recipes.name.toLowerCase().includes(value)
+                );
+              });
           setResults(results);
-  });
-};
+          });
+  };
   const handleChange = (value) => {
-      setInput(value);
+      setInput();
       fetchData(value);
   };
   return (
@@ -51,6 +52,7 @@ const SearchBar = ({ setResults }) => {
       </div>
   );
 };
+/* Search Bar End */
 
 const SearchResult = ({ result }) => {
   return (
@@ -70,5 +72,4 @@ const SearchResultsList = ({ results }) => {
       </div>
   );
 };
-
 export default Search
