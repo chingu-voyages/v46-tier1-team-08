@@ -1,8 +1,6 @@
-ul{
+ul, ol{
   list-style-type: none;
-}
-ol{
-  list-style-type: none;
+  text-align: left;
 }
 a{
   margin-right: 5px;
@@ -55,9 +53,9 @@ a{
   background: #eefee9;
   color: #414445;
   font-size: 12px;
-  text-align: left;
   padding: 5px;
   overflow: scroll;
+  font-weight: 400;
 }
 .flipCard .content {
   transform: rotateY(180deg);

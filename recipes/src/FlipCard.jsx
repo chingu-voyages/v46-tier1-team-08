@@ -50,8 +50,7 @@ function FlipCard() {
               <div className={styles.back}>
                 {activeSection === "ingredients" && (
                   <div id={styles.ingredients}>
-                    <ul>
-                      <a
+                         <a
                         href="#ingredients"
                         onClick={(e) => {
                           e.stopPropagation();
@@ -69,6 +68,7 @@ function FlipCard() {
                       >
                         Instructions
                       </a>
+                    <ul>
                       {filteredIngredientNames.map((display_text, i) => (
                         <li key={i}>{display_text}</li>
                       ))}
@@ -78,8 +78,7 @@ function FlipCard() {
 
                 {activeSection === "howTo" && (
                   <div id={styles.howTo}>
-                    <ol>
-                      <a
+                       <a
                         href="#ingredients"
                         onClick={(e) => {
                           e.stopPropagation();
@@ -97,6 +96,7 @@ function FlipCard() {
                       >
                         Instructions
                       </a>
+                    <ol>
                       {recipe.instructions.map((instruction, i) => (
                         <li key={i}>{instruction.display_text}</li>
                       ))}
