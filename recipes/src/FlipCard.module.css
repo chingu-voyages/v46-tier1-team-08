@@ -16,7 +16,6 @@ a{
   align-items: flex-start;
   padding: 20px;
 }
-
 .card {
   position: relative;
   font-family: "open sans", sans-serif;
@@ -24,7 +23,6 @@ a{
   height: 319px;
   margin: 10px;
   perspective: 500px;
-  
 }
 .content {
   position: absolute; 
@@ -34,7 +32,6 @@ a{
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   transition: transform 1s;
   transform-style: preserve-3d;
-  
 }
 .front, .back {
   position: absolute;
@@ -57,8 +54,11 @@ a{
   transform: rotateY(180deg);
   background: #eefee9;
   color: #414445;
+  font-size: 12px;
+  text-align: left;
+  padding: 5px;
+  overflow: scroll;
 }
-
 .flipCard .content {
   transform: rotateY(180deg);
   border-radius: 5%;
