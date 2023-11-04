@@ -68,9 +68,13 @@ function FlipCard() {
                       >
                         Instructions
                       </a>
-                    <ul>
+                    <ul className={styles.ingredientsList}>
                       {filteredIngredientNames.map((display_text, i) => (
-                        <li key={i}>{display_text}</li>
+                         <li key={i}>
+                         <input type="checkbox" id={`ingredient-${i}`} onClick={(e) => e.stopPropagation()} />
+                         <label htmlFor={`ingredient-${i}`}>{display_text}</label>
+                       </li>
+                        
                       ))}
                     </ul>
                   </div>

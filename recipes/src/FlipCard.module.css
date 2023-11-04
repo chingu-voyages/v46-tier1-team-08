@@ -1,8 +1,18 @@
-ul, ol{
-  list-style-type: none;
+ ol, ul{
   text-align: left;
+} 
+.ingredientsList{
+  list-style-type: none;
 }
+.ingredientsList li{
+  display: flex;
+  align-items: flex-start;
+}
+ .ingredientsList input[type="checkbox"]{
+  margin-right: 10px;
+} 
 a{
+  justify-content: center;
   margin-right: 5px;
   margin-left: 5px;
 }
@@ -36,7 +46,7 @@ a{
   width: 100%;
   height: 100%;
   color: #414445;
-  text-align: center;
+  text-align: center; 
   font-size: 15px;
   backface-visibility: hidden;
   border-radius: 5%;
@@ -53,9 +63,13 @@ a{
   background: #eefee9;
   color: #414445;
   font-size: 12px;
-  padding: 5px;
+  padding: 15px;
   overflow: scroll;
   font-weight: 400;
+  /* text-align: left; */
+   display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
 }
 .flipCard .content {
   transform: rotateY(180deg);
