@@ -22,7 +22,9 @@ function FlipCard() {
         }
         const ingredientNames = recipe.sections.flatMap((section) =>
           section.components.map((component) =>
-            component.ingredient ? component.ingredient.name : null
+            component.ingredient
+              ? `${component.measurements[0].quantity} ${component.measurements[0].unit.abbreviation} ${component.ingredient.name}`
+              : null
           )
         );
 
@@ -50,31 +52,34 @@ function FlipCard() {
               <div className={styles.back}>
                 {activeSection === "ingredients" && (
                   <div id={styles.ingredients}>
-                         <a
-                        href="#ingredients"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setActiveSection("ingredients");
-                        }}
-                      >
-                        Ingredients
-                      </a>
-                      <a
-                        href="#howTo"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setActiveSection("howTo");
-                        }}
-                      >
-                        Instructions
-                      </a>
+                    <a
+                      href="#ingredients"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveSection("ingredients");
+                      }}
+                    >
+                      Ingredients
+                    </a>
+                    <a
+                      href="#howTo"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveSection("howTo");
+                      }}
+                    >
+                      Instructions
+                    </a>
                     <ul className={styles.ingredientsList}>
-                      {filteredIngredientNames.map((display_text, i) => (
-                         <li key={i}>
-                         <input type="checkbox" id={`ingredient-${i}`} onClick={(e) => e.stopPropagation()} />
-                         <label htmlFor={`ingredient-${i}`}>{display_text}</label>
-                       </li>
-                        
+                      {filteredIngredientNames.map((raw_text, i) => (
+                        <li key={i}>
+                          <input
+                            type="checkbox"
+                            id={`ingredient-${i}`}
+                            onClick={(e) => e.stopPropagation()}
+                          />
+                          <label htmlFor={`ingredient-${i}`}>{raw_text}</label>
+                        </li>
                       ))}
                     </ul>
                   </div>
@@ -82,24 +87,24 @@ function FlipCard() {
 
                 {activeSection === "howTo" && (
                   <div id={styles.howTo}>
-                       <a
-                        href="#ingredients"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setActiveSection("ingredients");
-                        }}
-                      >
-                        Ingredients
-                      </a>
-                      <a
-                        href="#howTo"
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setActiveSection("howTo");
-                        }}
-                      >
-                        Instructions
-                      </a>
+                    <a
+                      href="#ingredients"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveSection("ingredients");
+                      }}
+                    >
+                      Ingredients
+                    </a>
+                    <a
+                      href="#howTo"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setActiveSection("howTo");
+                      }}
+                    >
+                      Instructions
+                    </a>
                     <ol>
                       {recipe.instructions.map((instruction, i) => (
                         <li key={i}>{instruction.display_text}</li>

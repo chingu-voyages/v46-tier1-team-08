@@ -67,7 +67,7 @@ a{
   overflow: scroll;
   font-weight: 400;
   /* text-align: left; */
-   display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start; 
 }
@@ -75,3 +75,10 @@ a{
   transform: rotateY(180deg);
   border-radius: 5%;
 }
+/* 1. align check boxes and ingredient lists to left side of card, 
+   2.stop synching when more than one card is flipped to back,
+   3.get it so the checkbox is checked only when the box itself is checked 
+   t*/
+
+
+   
