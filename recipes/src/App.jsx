@@ -7,7 +7,7 @@ const App = () => {
   return(
     <>
     <Search />
-    {/*<Card />*/}
+    <Card />
     </>
   )
 }
