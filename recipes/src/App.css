@@ -42,7 +42,7 @@
   background-size: cover;
   background-position: 50% 50%;
   height: 100vh;
-  width: 100vw;
+   width: 100vw; 
 }
 .search-bar-container {
   align-items: center;

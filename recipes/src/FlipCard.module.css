@@ -7,17 +7,25 @@
 .ingredientsList li{
   display: flex;
   align-items: flex-start;
+  
 }
  .ingredientsList input[type="checkbox"]{
-  margin-right: 10px;
-} 
+  margin-right: 5px;
+  width: auto;
+}  
+.ingredientsList label {
+  display: inline-block; 
+   width: auto;  
+  white-space: nowrap; 
+}
+
 a{
   justify-content: center;
   margin-right: 5px;
   margin-left: 5px;
 }
 .main {
-  background: #eefee9;
+  background: #eefee9; 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -34,7 +42,7 @@ a{
 }
 .content {
   position: absolute; 
-  width: 100%;
+  width: 100%; 
   height: 100%;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -43,7 +51,7 @@ a{
 }
 .front, .back {
   position: absolute;
-  width: 100%;
+   width: 100%; 
   height: 100%;
   color: #414445;
   text-align: center; 
@@ -66,19 +74,19 @@ a{
   padding: 15px;
   overflow: scroll;
   font-weight: 400;
-  /* text-align: left; */
+ 
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
+  
 }
 .flipCard .content {
   transform: rotateY(180deg);
   border-radius: 5%;
 }
-/* 1. align check boxes and ingredient lists to left side of card, 
-   2.stop synching when more than one card is flipped to back,
-   3.get it so the checkbox is checked only when the box itself is checked 
-   t*/
+/*  
+   1.stop synching when more than one card is flipped to back, 
+   */
 
 
    
