@@ -5,12 +5,17 @@ import styles from "./FlipCard.module.css";
 function FlipCard() {
   const recipes = data[0].results;
   const [isFlipped, setIsFlipped] = useState(Array(recipes.length).fill(false));
-  const [activeSection, setActiveSection] = useState("ingredients");
+  const [activeSection, setActiveSection] = useState(Array(recipes.length).fill("ingredients"));
 
   const handleClick = (index) => {
     const newIsFlipped = [...isFlipped];
     newIsFlipped[index] = !newIsFlipped[index];
     setIsFlipped(newIsFlipped);
+  };
+  const handleSectionClick = (section, index) => {
+    const newActiveSection = [...activeSection];
+    newActiveSection[index] = section;
+    setActiveSection(newActiveSection);
   };
 
   return (
@@ -50,13 +55,13 @@ function FlipCard() {
                 <h2 className={styles.cardName}>{recipe.name}</h2>
               </div>
               <div className={styles.back}>
-                {activeSection === "ingredients" && (
+                {activeSection[index] === "ingredients" && (
                   <div id={styles.ingredients}>
                     <a
                       href="#ingredients"
                       onClick={(e) => {
                         e.stopPropagation();
-                        setActiveSection("ingredients");
+                        handleSectionClick("ingredients", index);
                       }}
                     >
                       Ingredients
@@ -65,7 +70,7 @@ function FlipCard() {
                       href="#howTo"
                       onClick={(e) => {
                         e.stopPropagation();
-                        setActiveSection("howTo");
+                        handleSectionClick("howTo", index);
                       }}
                     >
                       Instructions
@@ -85,13 +90,13 @@ function FlipCard() {
                   </div>
                 )}
 
-                {activeSection === "howTo" && (
+                {activeSection[index] === "howTo" && (
                   <div id={styles.howTo}>
                     <a
                       href="#ingredients"
                       onClick={(e) => {
                         e.stopPropagation();
-                        setActiveSection("ingredients");
+                        handleSectionClick("ingredients", index);
                       }}
                     >
                       Ingredients
@@ -100,7 +105,7 @@ function FlipCard() {
                       href="#howTo"
                       onClick={(e) => {
                         e.stopPropagation();
-                        setActiveSection("howTo");
+                        handleSectionClick("howTo", index);
                       }}
                     >
                       Instructions
