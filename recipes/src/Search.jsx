@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
+import "./FlipCard.jsx";
 import logo from "./chefs-hat.svg";
 import data from "./data.json";
 import { FaSearch } from "react-icons/fa";
@@ -7,17 +8,41 @@ import { FaSearch } from "react-icons/fa";
 function Search() {
   const [results, setResults] = useState([]);
   const [filteredResults, setFilteredResults] = useState([]);
+  const [input, setInput] = useState("");
+  const filterResults = (value) => {
+    const filteredResults = data.filter((recipe) => {
+      return (
+        value && recipe.ingredient.some((ingredient) => 
+        ingredient.toLowerCase().includes(value.toLowerCase())
+        )
+      );
+    });
+    setFilteredResults(filteredResults);
+  };
+
+  useEffect(() => {
+  filterResults(input);
+}, [input]);
 
   return (
       <div className="Search">
         <div className="script">
           <div className="search-bar-container">
             <img src={logo} alt="Chef's Hat logo" />
-            <SearchBar setResults={setResults} data={data} setFilteredResults={setFilteredResults} />
-            {filteredResults && filteredResults.length > 0 && (<SearchResultsList 
-            results={filteredResults} />)}
-          </div>
-          <h1>Recipes is an app for collecting and organizing your recipes</h1>
+            <div className="input-wrapper">
+              <input 
+                placeholder="Enter an ingredient"
+                value={input} 
+                onChange={(e) => setInput(e.target.value)} />
+                <FaSearch id="search-icon" 
+                onClick={() => filterResults(input)} />
+                <label>Search</label>
+            </div>
+            {filteredResults && filteredResults.length > 0 && (
+              <SearchResultsList results={filteredResults} />
+            )}
+            </div>
+            <h1>Recipes is an app for collecting and organizing your recipes</h1>
         </div>
       </div>
   );
@@ -37,11 +62,16 @@ const SearchBar = ({ setResults, data, setFilteredResults }) => {
           .then((response) => response.json())
           .then((json) => {*/
       const filteredResults = data.filter((recipe) => {
-        return value && recipe && recipe.name &&
-          recipe.name.toLowerCase().includes(value);
+        return value && recipe.ingredient.some((ingredient) =>
+          ingredient.toLowerCase().includes(value.toLowerCase())
+          )
         });
         setFilteredResults(filteredResults);
-      };
+      }
+      useEffect(() => {
+        filterResults(input);
+      }, [input, data]);
+
 
 return (
       <div className="input-wrapper">
@@ -68,8 +98,8 @@ const SearchResult = ({ result }) => {
 const SearchResultsList = ({ results }) => {
   return (
       <div className="results-list">
-          {results.map((result, id) => {
-              return <SearchResult result={result.name} key={id} />;
+          {results.map((recipe, id) => {
+              return <SearchResult result={recipe.ingredients.join(", ")} key={id} />;
           })}
       </div>
   );
