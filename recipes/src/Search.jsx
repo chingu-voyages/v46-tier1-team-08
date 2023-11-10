@@ -6,15 +6,16 @@ import { FaSearch } from "react-icons/fa";
 
 function Search() {
   const [results, setResults] = useState([]);
+  const [filteredResults, setFilteredResults] = useState([]);
 
   return (
       <div className="Search">
         <div className="script">
           <div className="search-bar-container">
             <img src={logo} alt="Chef's Hat logo" />
-            <SearchBar setResults={setResults} data={data} />
-            {results && results.length > 0 && <SearchResultsList 
-            results={results} />}
+            <SearchBar setResults={setResults} data={data} setFilteredResults={setFilteredResults} />
+            {filteredResults && filteredResults.length > 0 && (<SearchResultsList 
+            results={filteredResults} />)}
           </div>
           <h1>Recipes is an app for collecting and organizing your recipes</h1>
         </div>
@@ -22,25 +23,25 @@ function Search() {
   );
 }
 /* Search Bar */
-const SearchBar = ({ setResults, data }) => {
+const SearchBar = ({ setResults, data, setFilteredResults }) => {
   const [input, setInput] = useState("");
-  const fetchData = (value) => {
-      /*fetch ("https://jsonplaceholder.typicode.com/users")
-          .then((response) => response.json())
-          .then((json) => {*/
-      const results = data.filter((recipe) => {
-        return value && recipe && recipe.name &&
-        recipe.name.toLowerCase().includes(value);
-        });
-        setResults(results);
-        console.log("Filtered Results", results);
-      };
   const handleSearchIconClick = () => {
-    fetchData(input);
+    filterResults(input);
   };
   const handleChange = (value) => {
     setInput(value);
-  }
+    filterResults(value);
+  };
+  const filterResults = (value) => {
+      /*fetch ("https://jsonplaceholder.typicode.com/users")
+          .then((response) => response.json())
+          .then((json) => {*/
+      const filteredResults = data.filter((recipe) => {
+        return value && recipe && recipe.name &&
+          recipe.name.toLowerCase().includes(value);
+        });
+        setFilteredResults(filteredResults);
+      };
 
 return (
       <div className="input-wrapper">

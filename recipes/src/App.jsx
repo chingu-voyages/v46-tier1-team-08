@@ -1,15 +1,15 @@
 import './App.css';
-import Card from './Card.jsx';
 import Search from './Search.jsx';
+import Card from './FlipCard.jsx';
 
 const App = () => {
-  return(
+  return (
     <>
-    <Search />
-      <Card />
       <Search />
+      <Card />
     </>
   )
 }
+
 export default App;
 

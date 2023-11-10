@@ -41,8 +41,11 @@
   color: #888;
 }
 
+/* Card Styles */
+
+
 /* Search Styles */
-body {
+.Search {
   background: url(img/photo-1543353071-873f17a7a088.jpg);
   background-size: cover;
   height: 100%;
@@ -60,13 +63,13 @@ body {
   color: #414445;
   font-size: 1.5em;
   font-weight: bold;
-  padding: 5% 0 0 15%;
+  padding: 5% 0 10% 15%;
   text-shadow: 2px 2px #ffffff;
   width: 80%;
 }
 img {
   padding: 20% 0 0 0;
-  width: 40%;
+  width: 20%;
 }
 .input-wrapper {
   align-items: center;
